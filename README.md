@@ -3,5 +3,6 @@ An iOS and Apple Vision Pro Augmented Reality (AR) viewer for home additions, pe
 
 Design: Chris Barnett
 
-![image](https://github.com/user-attachments/assets/412b08e4-9bf7-451c-8c7f-91cf5cf3a940)
+![image](https://github.com/user-attachments/assets/843a7f7e-fb1a-4960-82a6-ce5c65d074ca)
+
 
