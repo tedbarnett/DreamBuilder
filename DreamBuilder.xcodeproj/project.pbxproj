@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */; };
+		883CB52A2CBE35E00067B74A /* Post_Apocalyptic_Office.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB5292CBE35E00067B74A /* Post_Apocalyptic_Office.usdz */; };
+		883CB5302CBE3A530067B74A /* Pergola 3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB52D2CBE3A530067B74A /* Pergola 3.usdz */; };
 		88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406AFF2CAE5FED0058E99A /* AppDelegate.swift */; };
 		88406B022CAE5FED0058E99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B012CAE5FED0058E99A /* SceneDelegate.swift */; };
 		88406B042CAE5FED0058E99A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B032CAE5FED0058E99A /* HomeVC.swift */; };
@@ -14,11 +17,12 @@
 		88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88406B082CAE5FEF0058E99A /* Assets.xcassets */; };
 		88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88406B0A2CAE5FEF0058E99A /* LaunchScreen.storyboard */; };
 		88406B262CAE61C80058E99A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B252CAE61C80058E99A /* Extensions.swift */; };
+		8863DE492CBCE10F0097222D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE482CBCE10F0097222D /* Constants.swift */; };
+		8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */; };
 		8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */; };
 		8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */; };
 		8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */; };
-		8890E8DE2CB3B95100909554 /* Pergola 2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8DC2CB3B95100909554 /* Pergola 2.usdz */; };
-		8890E8DF2CB3B95100909554 /* Home.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8DD2CB3B95100909554 /* Home.usdz */; };
+		8890E8DF2CB3B95100909554 /* Pergola 2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8DD2CB3B95100909554 /* Pergola 2.usdz */; };
 		8890E8E52CB3C01B00909554 /* FSPopoverView in Frameworks */ = {isa = PBXBuildFile; productRef = 8890E8E42CB3C01B00909554 /* FSPopoverView */; };
 		8890E8E82CB3C5B400909554 /* AdjustLightPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */; };
 		8890E8EA2CB3C96500909554 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E92CB3C96500909554 /* CustomSlider.swift */; };
@@ -26,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaceModelVC.swift; sourceTree = "<group>"; };
+		883CB5292CBE35E00067B74A /* Post_Apocalyptic_Office.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Post_Apocalyptic_Office.usdz; sourceTree = "<group>"; };
+		883CB52D2CBE3A530067B74A /* Pergola 3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 3.usdz"; sourceTree = "<group>"; };
 		88406AFC2CAE5FED0058E99A /* DreamBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88406AFF2CAE5FED0058E99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88406B012CAE5FED0058E99A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,11 +42,12 @@
 		88406B0B2CAE5FEF0058E99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88406B0D2CAE5FEF0058E99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88406B252CAE61C80058E99A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8863DE482CBCE10F0097222D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
 		8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select3DObjectVC.swift; sourceTree = "<group>"; };
 		8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectionCell.swift; sourceTree = "<group>"; };
 		8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelSelectionCell.xib; sourceTree = "<group>"; };
-		8890E8DC2CB3B95100909554 /* Pergola 2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 2.usdz"; sourceTree = "<group>"; };
-		8890E8DD2CB3B95100909554 /* Home.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Home.usdz; sourceTree = "<group>"; };
+		8890E8DD2CB3B95100909554 /* Pergola 2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 2.usdz"; sourceTree = "<group>"; };
 		8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustLightPopupVC.swift; sourceTree = "<group>"; };
 		8890E8E92CB3C96500909554 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		88B3AEDC2CAFE702000B3593 /* Pergola 1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 1.usdz"; sourceTree = "<group>"; };
@@ -57,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		882A83DD2CB8E1820095BA6C /* Hidden */ = {
+			isa = PBXGroup;
+			children = (
+				88406B032CAE5FED0058E99A /* HomeVC.swift */,
+			);
+			path = Hidden;
+			sourceTree = "<group>";
+		};
 		88406AF32CAE5FED0058E99A = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +132,9 @@
 		88406B162CAE60990058E99A /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				882A83DD2CB8E1820095BA6C /* Hidden */,
 				8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */,
-				88406B032CAE5FED0058E99A /* HomeVC.swift */,
+				882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */,
 				8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */,
 			);
 			path = VC;
@@ -135,8 +152,10 @@
 		88406B242CAE61C80058E99A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */,
 				88406B252CAE61C80058E99A /* Extensions.swift */,
 				8890E8E92CB3C96500909554 /* CustomSlider.swift */,
+				8863DE482CBCE10F0097222D /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -145,8 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				88B3AEDC2CAFE702000B3593 /* Pergola 1.usdz */,
-				8890E8DC2CB3B95100909554 /* Pergola 2.usdz */,
-				8890E8DD2CB3B95100909554 /* Home.usdz */,
+				8890E8DD2CB3B95100909554 /* Pergola 2.usdz */,
+				883CB52D2CBE3A530067B74A /* Pergola 3.usdz */,
+				883CB5292CBE35E00067B74A /* Post_Apocalyptic_Office.usdz */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,13 +245,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883CB5302CBE3A530067B74A /* Pergola 3.usdz in Resources */,
 				88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */,
-				8890E8DE2CB3B95100909554 /* Pergola 2.usdz in Resources */,
+				883CB52A2CBE35E00067B74A /* Post_Apocalyptic_Office.usdz in Resources */,
 				88B3AEDD2CAFE702000B3593 /* Pergola 1.usdz in Resources */,
 				88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */,
 				88406B072CAE5FED0058E99A /* Main.storyboard in Resources */,
 				8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */,
-				8890E8DF2CB3B95100909554 /* Home.usdz in Resources */,
+				8890E8DF2CB3B95100909554 /* Pergola 2.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +288,15 @@
 			files = (
 				88406B042CAE5FED0058E99A /* HomeVC.swift in Sources */,
 				8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */,
+				882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */,
 				8890E8E82CB3C5B400909554 /* AdjustLightPopupVC.swift in Sources */,
 				8890E8EA2CB3C96500909554 /* CustomSlider.swift in Sources */,
+				8863DE492CBCE10F0097222D /* Constants.swift in Sources */,
 				88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */,
 				88406B022CAE5FED0058E99A /* SceneDelegate.swift in Sources */,
 				8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */,
 				88406B262CAE61C80058E99A /* Extensions.swift in Sources */,
+				8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -407,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -433,8 +457,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +467,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,8 +492,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,6 +502,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

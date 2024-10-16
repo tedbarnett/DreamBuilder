@@ -27,7 +27,7 @@ class Select3DObjectVC: UIViewController {
     // MARK: - Action
     @IBAction func btnPlace3DObjectAction(_ sender: UIButton) {
         if let modelURL = selectedModelURL {
-            let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            let homeVC = storyboard?.instantiateViewController(withIdentifier: "ARPlaceModelVC") as! ARPlaceModelVC // HomeVC 
             homeVC.modelURL = modelURL
             navigationController?.pushViewController(homeVC, animated: true)
         }
