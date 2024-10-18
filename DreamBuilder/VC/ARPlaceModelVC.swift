@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FSPopoverView
 import ARKit
 
 class ARPlaceModelVC: UIViewController {
@@ -26,7 +25,7 @@ class ARPlaceModelVC: UIViewController {
     private var modelNode: SCNNode?
     private var directionalLightNode: SCNNode?
     
-    var modelURL: URL!
+    var pergolaModel: PergolaModel!
 
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -43,14 +42,14 @@ class ARPlaceModelVC: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        DispatchQueue.main.async {
-            UIApplication.shared.isIdleTimerDisabled = false
-        }
-        
         sceneView.session.pause()
         removePlane()
         modelNode?.removeFromParentNode()
         modelNode = nil
+        
+        DispatchQueue.main.async {
+            UIApplication.shared.isIdleTimerDisabled = false
+        }
     }
 
     // MARK: - Functions
@@ -63,7 +62,6 @@ class ARPlaceModelVC: UIViewController {
         sceneView.automaticallyUpdatesLighting = true
         sceneView.allowsCameraControl = false
         sceneView.scene = SCNScene()
-        sceneView.addCoaching()
     }
 
     private func setupGestures() {
@@ -99,7 +97,7 @@ class ARPlaceModelVC: UIViewController {
     }
 
     private func setupNavigationBar() {
-        title = modelURL.deletingPathExtension().lastPathComponent
+        title = pergolaModel.url.deletingPathExtension().lastPathComponent
         navigationController?.navigationBar.tintColor = .label
 
         navRightBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
@@ -155,10 +153,11 @@ class ARPlaceModelVC: UIViewController {
         //configuration.frameSemantics.insert(.personSegmentationWithDepth)
         
         sceneView.session.run(configuration)
-        showMessage(Message.findASurfaceToPlaneAnObject)
 
         DispatchQueue.main.async {
             UIApplication.shared.isIdleTimerDisabled = true
+            self.sceneView.addCoaching()
+            self.showMessage(Message.findASurfaceToPlaneAnObject)
         }
     }
 
@@ -204,8 +203,8 @@ class ARPlaceModelVC: UIViewController {
     }
     
     private func placeModel(result: ARRaycastResult) {
-        let name = modelURL.lastPathComponent
-        guard let modelScene = try? SCNScene(url: modelURL, options: nil) else {
+        let name = pergolaModel.url.lastPathComponent
+        guard let modelScene = try? SCNScene(url: pergolaModel.url, options: nil) else {
             showMessage(Message.faileToLoadObject)
             return
         }
@@ -213,11 +212,17 @@ class ARPlaceModelVC: UIViewController {
         let modelNode = modelScene.rootNode.clone()
         let columns = result.worldTransform.columns
         
-        modelNode.scale = SCNVector3(x: 0.0009, y: 0.0009, z: 0.0009)
         modelNode.name = name
         modelNode.castsShadow = true
-        modelNode.position = SCNVector3(x: columns.3.x, y: columns.3.y, z: columns.3.z)
+        modelNode.position = SCNVector3(x: columns.3.x, y: columns.3.y, z: columns.3.z) 
+        modelNode.eulerAngles = pergolaModel.eulerAngles
+        modelNode.scale = pergolaModel.scale //SCNVector3(x: 0.0009, y: 0.0009, z: 0.0009)
         
+        DispatchQueue.main.async {
+            self.lblScale.isHidden = false
+            self.lblScale.text = "Scale: \(modelNode.scale.x)"
+        }
+
         // Directional light for realistic lighting and shadows
         /*let light = SCNLight()
         light.type = .directional
@@ -371,12 +376,13 @@ extension ARPlaceModelVC: UIGestureRecognizerDelegate {
             let pinchScaleY = Float(gesture.scale) * node.scale.y
             let pinchScaleZ = Float(gesture.scale) * node.scale.z
 
-            guard pinchScaleX > 0.0002 else { return }
+            guard pinchScaleX > pergolaModel.minScale.x else { return }
             node.scale = SCNVector3(pinchScaleX, pinchScaleY, pinchScaleZ)
 
             DispatchQueue.main.async {
                 let scale = node.scale.x
                 self.lblScale.text = "Scale: \(scale)"
+                self.lblScale.isHidden = false
             }
 
             gesture.scale = 1.0

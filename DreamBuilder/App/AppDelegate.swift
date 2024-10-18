@@ -6,33 +6,13 @@
 //
 
 import UIKit
-import FSPopoverView
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        setupPopover()
         return true
-    }
-    
-    // MARK: - Setup pop over menu appearance
-    private func setupPopover() {
-        let appearance = FSPopoverView.fs_appearance()
-        appearance.showsArrow = true
-        appearance.showsDimBackground = true
-        appearance.backgroundColor = .white
-        appearance.separatorColor = .gray
-        appearance.textColor = .black
-        appearance.textFont = UIFont.systemFont(ofSize: 14, weight: .medium)
-        appearance.separatorInset = .zero
-        appearance.borderColor = .clear
-        appearance.borderWidth = 0
-        appearance.shadowColor = .black.withAlphaComponent(0.15)
-        appearance.highlightedColor = .clear
-        appearance.cornerRadius = 8
-        appearance.spacing = 40
     }
 
     // MARK: UISceneSession Lifecycle
