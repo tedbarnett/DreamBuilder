@@ -17,33 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arkit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="taK-J5-b3C">
-                                <rect key="frame" x="121.66666666666669" y="351" width="150" height="150"/>
-                                <color key="tintColor" systemColor="labelColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-WT-xrF">
+                                <rect key="frame" x="71.666666666666686" y="401" width="250" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="JOv-BB-hOA"/>
-                                    <constraint firstAttribute="height" constant="150" id="Jsv-Ek-MCA"/>
+                                    <constraint firstAttribute="width" constant="250" id="XmM-jq-x6B"/>
+                                    <constraint firstAttribute="height" constant="50" id="uCF-BA-OXy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="taK-J5-b3C" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nch-tG-OtP"/>
-                            <constraint firstItem="taK-J5-b3C" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tdk-Rt-0N9"/>
+                            <constraint firstItem="FRL-WT-xrF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="16U-Ru-5gt"/>
+                            <constraint firstItem="FRL-WT-xrF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9Vj-Ot-K6B"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arkit" catalog="system" width="128" height="125"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="logo" width="936" height="159"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

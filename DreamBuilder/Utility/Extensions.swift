@@ -40,7 +40,6 @@ extension UIViewController {
             preferredStyle: .alert
         )
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { _ in
             if let appSettings = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
@@ -90,12 +89,14 @@ extension ARSCNView {
     }
 }
 
+/*
 // MARK: - SCNVector3
 extension SCNVector3 {
     func distance(to vector: SCNVector3) -> Float {
         return sqrt(pow(vector.x - self.x, 2) + pow(vector.y - self.y, 2) + pow(vector.z - self.z, 2))
     }
 }
+*/
 
 // MARK: - CGPoint
 extension CGPoint {

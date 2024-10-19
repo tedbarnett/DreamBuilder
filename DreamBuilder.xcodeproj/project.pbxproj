@@ -8,49 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */; };
-		883CB52A2CBE35E00067B74A /* Post_Apocalyptic_Office.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB5292CBE35E00067B74A /* Post_Apocalyptic_Office.usdz */; };
-		883CB5302CBE3A530067B74A /* Pergola 3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB52D2CBE3A530067B74A /* Pergola 3.usdz */; };
+		883CB5302CBE3A530067B74A /* Traditional.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB52D2CBE3A530067B74A /* Traditional.usdz */; };
 		88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406AFF2CAE5FED0058E99A /* AppDelegate.swift */; };
 		88406B022CAE5FED0058E99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B012CAE5FED0058E99A /* SceneDelegate.swift */; };
-		88406B042CAE5FED0058E99A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B032CAE5FED0058E99A /* HomeVC.swift */; };
 		88406B072CAE5FED0058E99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88406B052CAE5FED0058E99A /* Main.storyboard */; };
 		88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88406B082CAE5FEF0058E99A /* Assets.xcassets */; };
 		88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88406B0A2CAE5FEF0058E99A /* LaunchScreen.storyboard */; };
 		88406B262CAE61C80058E99A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B252CAE61C80058E99A /* Extensions.swift */; };
+		88588FEE2CC0E40500EEBABC /* PergolaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88588FED2CC0E40500EEBABC /* PergolaModel.swift */; };
 		8863DE492CBCE10F0097222D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE482CBCE10F0097222D /* Constants.swift */; };
 		8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */; };
+		886EAE9E2CC0F360007AC8A2 /* Modern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 886EAE9D2CC0F360007AC8A2 /* Modern.usdz */; };
 		8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */; };
 		8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */; };
 		8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */; };
-		8890E8DF2CB3B95100909554 /* Pergola 2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8DD2CB3B95100909554 /* Pergola 2.usdz */; };
-		8890E8E52CB3C01B00909554 /* FSPopoverView in Frameworks */ = {isa = PBXBuildFile; productRef = 8890E8E42CB3C01B00909554 /* FSPopoverView */; };
 		8890E8E82CB3C5B400909554 /* AdjustLightPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */; };
 		8890E8EA2CB3C96500909554 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E92CB3C96500909554 /* CustomSlider.swift */; };
-		88B3AEDD2CAFE702000B3593 /* Pergola 1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 88B3AEDC2CAFE702000B3593 /* Pergola 1.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaceModelVC.swift; sourceTree = "<group>"; };
-		883CB5292CBE35E00067B74A /* Post_Apocalyptic_Office.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Post_Apocalyptic_Office.usdz; sourceTree = "<group>"; };
-		883CB52D2CBE3A530067B74A /* Pergola 3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 3.usdz"; sourceTree = "<group>"; };
+		883CB52D2CBE3A530067B74A /* Traditional.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Traditional.usdz; sourceTree = "<group>"; };
 		88406AFC2CAE5FED0058E99A /* DreamBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88406AFF2CAE5FED0058E99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88406B012CAE5FED0058E99A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88406B032CAE5FED0058E99A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		88406B062CAE5FED0058E99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88406B082CAE5FEF0058E99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88406B0B2CAE5FEF0058E99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88406B0D2CAE5FEF0058E99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88406B252CAE61C80058E99A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		88588FED2CC0E40500EEBABC /* PergolaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergolaModel.swift; sourceTree = "<group>"; };
 		8863DE482CBCE10F0097222D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		886EAE9D2CC0F360007AC8A2 /* Modern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Modern.usdz; sourceTree = "<group>"; };
 		8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select3DObjectVC.swift; sourceTree = "<group>"; };
 		8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectionCell.swift; sourceTree = "<group>"; };
 		8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelSelectionCell.xib; sourceTree = "<group>"; };
-		8890E8DD2CB3B95100909554 /* Pergola 2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 2.usdz"; sourceTree = "<group>"; };
 		8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustLightPopupVC.swift; sourceTree = "<group>"; };
 		8890E8E92CB3C96500909554 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
-		88B3AEDC2CAFE702000B3593 /* Pergola 1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Pergola 1.usdz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,21 +53,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8890E8E52CB3C01B00909554 /* FSPopoverView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		882A83DD2CB8E1820095BA6C /* Hidden */ = {
-			isa = PBXGroup;
-			children = (
-				88406B032CAE5FED0058E99A /* HomeVC.swift */,
-			);
-			path = Hidden;
-			sourceTree = "<group>";
-		};
 		88406AF32CAE5FED0058E99A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				88406B132CAE5FF50058E99A /* App */,
+				88588FEC2CC0E3F200EEBABC /* Model */,
 				88406B152CAE60070058E99A /* View */,
 				88406B162CAE60990058E99A /* VC */,
 				88406B242CAE61C80058E99A /* Utility */,
@@ -132,7 +119,6 @@
 		88406B162CAE60990058E99A /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				882A83DD2CB8E1820095BA6C /* Hidden */,
 				8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */,
 				882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */,
 				8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */,
@@ -163,10 +149,16 @@
 		88406B272CAE66FF0058E99A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88B3AEDC2CAFE702000B3593 /* Pergola 1.usdz */,
-				8890E8DD2CB3B95100909554 /* Pergola 2.usdz */,
-				883CB52D2CBE3A530067B74A /* Pergola 3.usdz */,
-				883CB5292CBE35E00067B74A /* Post_Apocalyptic_Office.usdz */,
+				886EAE9D2CC0F360007AC8A2 /* Modern.usdz */,
+				883CB52D2CBE3A530067B74A /* Traditional.usdz */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88588FEC2CC0E3F200EEBABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88588FED2CC0E40500EEBABC /* PergolaModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,7 +190,6 @@
 			);
 			name = DreamBuilder;
 			packageProductDependencies = (
-				8890E8E42CB3C01B00909554 /* FSPopoverView */,
 			);
 			productName = DreamBuilder;
 			productReference = 88406AFC2CAE5FED0058E99A /* DreamBuilder.app */;
@@ -229,7 +220,6 @@
 			);
 			mainGroup = 88406AF32CAE5FED0058E99A;
 			packageReferences = (
-				8890E8E32CB3C01B00909554 /* XCRemoteSwiftPackageReference "FSPopoverView" */,
 			);
 			productRefGroup = 88406AFD2CAE5FED0058E99A /* Products */;
 			projectDirPath = "";
@@ -245,14 +235,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883CB5302CBE3A530067B74A /* Pergola 3.usdz in Resources */,
+				883CB5302CBE3A530067B74A /* Traditional.usdz in Resources */,
 				88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */,
-				883CB52A2CBE35E00067B74A /* Post_Apocalyptic_Office.usdz in Resources */,
-				88B3AEDD2CAFE702000B3593 /* Pergola 1.usdz in Resources */,
 				88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */,
 				88406B072CAE5FED0058E99A /* Main.storyboard in Resources */,
 				8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */,
-				8890E8DF2CB3B95100909554 /* Pergola 2.usdz in Resources */,
+				886EAE9E2CC0F360007AC8A2 /* Modern.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88406B042CAE5FED0058E99A /* HomeVC.swift in Sources */,
 				8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */,
 				882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */,
+				88588FEE2CC0E40500EEBABC /* PergolaModel.swift in Sources */,
 				8890E8E82CB3C5B400909554 /* AdjustLightPopupVC.swift in Sources */,
 				8890E8EA2CB3C96500909554 /* CustomSlider.swift in Sources */,
 				8863DE492CBCE10F0097222D /* Constants.swift in Sources */,
@@ -446,10 +434,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 63K8J7P389;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KQ3X2L5SCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamBuilder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App need access to the camera to show 3D models.";
@@ -457,14 +446,17 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pergoladreambuilder.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.realtest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -479,10 +471,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 63K8J7P389;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KQ3X2L5SCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamBuilder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App need access to the camera to show 3D models.";
@@ -490,14 +483,17 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pergoladreambuilder.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.realtest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -529,25 +525,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8890E8E32CB3C01B00909554 /* XCRemoteSwiftPackageReference "FSPopoverView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lifution/FSPopoverView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8890E8E42CB3C01B00909554 /* FSPopoverView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8890E8E32CB3C01B00909554 /* XCRemoteSwiftPackageReference "FSPopoverView" */;
-			productName = FSPopoverView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88406AF42CAE5FED0058E99A /* Project object */;
 }
