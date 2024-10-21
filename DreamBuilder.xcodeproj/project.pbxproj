@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882165BC2CC65AF2003A65E8 /* Modern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 882165BB2CC65AF2003A65E8 /* Modern.usdz */; };
 		882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */; };
 		883CB5302CBE3A530067B74A /* Traditional.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB52D2CBE3A530067B74A /* Traditional.usdz */; };
 		88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406AFF2CAE5FED0058E99A /* AppDelegate.swift */; };
@@ -18,7 +19,6 @@
 		88588FEE2CC0E40500EEBABC /* PergolaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88588FED2CC0E40500EEBABC /* PergolaModel.swift */; };
 		8863DE492CBCE10F0097222D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE482CBCE10F0097222D /* Constants.swift */; };
 		8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */; };
-		886EAE9E2CC0F360007AC8A2 /* Modern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 886EAE9D2CC0F360007AC8A2 /* Modern.usdz */; };
 		8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */; };
 		8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */; };
 		8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */; };
@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882165BB2CC65AF2003A65E8 /* Modern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Modern.usdz; sourceTree = "<group>"; };
 		882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaceModelVC.swift; sourceTree = "<group>"; };
 		883CB52D2CBE3A530067B74A /* Traditional.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Traditional.usdz; sourceTree = "<group>"; };
 		88406AFC2CAE5FED0058E99A /* DreamBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +41,6 @@
 		88588FED2CC0E40500EEBABC /* PergolaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergolaModel.swift; sourceTree = "<group>"; };
 		8863DE482CBCE10F0097222D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
-		886EAE9D2CC0F360007AC8A2 /* Modern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Modern.usdz; sourceTree = "<group>"; };
 		8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select3DObjectVC.swift; sourceTree = "<group>"; };
 		8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectionCell.swift; sourceTree = "<group>"; };
 		8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelSelectionCell.xib; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		88406B272CAE66FF0058E99A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				886EAE9D2CC0F360007AC8A2 /* Modern.usdz */,
+				882165BB2CC65AF2003A65E8 /* Modern.usdz */,
 				883CB52D2CBE3A530067B74A /* Traditional.usdz */,
 			);
 			path = Model;
@@ -240,7 +240,7 @@
 				88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */,
 				88406B072CAE5FED0058E99A /* Main.storyboard in Resources */,
 				8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */,
-				886EAE9E2CC0F360007AC8A2 /* Modern.usdz in Resources */,
+				882165BC2CC65AF2003A65E8 /* Modern.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,9 +435,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 63K8J7P389;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KQ3X2L5SCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamBuilder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App need access to the camera to show 3D models.";
@@ -455,6 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pergola.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -470,9 +473,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 63K8J7P389;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KQ3X2L5SCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamBuilder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App need access to the camera to show 3D models.";
@@ -490,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pergola.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

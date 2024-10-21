@@ -13,6 +13,7 @@ class ModelSelectionCell: UITableViewCell {
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var imgLogo: UIImageView!
     
     // MARK: - Lifecycle Methods
     override func awakeFromNib() {

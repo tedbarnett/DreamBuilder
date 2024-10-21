@@ -12,7 +12,6 @@ class Select3DObjectVC: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var btnPlace3DObject: UIButton!
     
     // MARK: - Variable
     var arrPergolaModel: [PergolaModel] = []
@@ -25,27 +24,28 @@ class Select3DObjectVC: UIViewController {
         setupUI()
     }
     
-    // MARK: - Action
-    @IBAction func btnPlace3DObjectAction(_ sender: UIButton) {
-        if let selectedPergolaModel = selectedPergolaModel {
-            let homeVC = storyboard?.instantiateViewController(withIdentifier: "ARPlaceModelVC") as! ARPlaceModelVC // HomeVC
-            homeVC.pergolaModel = selectedPergolaModel
-            navigationController?.pushViewController(homeVC, animated: true)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            coordinator.animate(alongsideTransition: { _ in
+                // Reload the table view to update cell heights
+                self.tableView.reloadData()
+            })
         }
     }
-    
+        
     // MARK: - Functions
     private func setupUI() {
         title = "Select pergola design"
         
-        btnPlace3DObject.layer.cornerRadius = 10
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ModelSelectionCell", bundle: nil), forCellReuseIdentifier: "ModelSelectionCell")
     }
     
     private func loadModels() {
-        let modern = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+        /*let modern = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
                                description: "6\" steel beams, louvered sunscreen",
                                scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
                                minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
@@ -54,31 +54,38 @@ class Select3DObjectVC: UIViewController {
         let traditional = PergolaModel(url: Bundle.main.url(forResource: "Traditional", withExtension: "usdz")!,
                                     description: "Oak 6\" beams",
                                     scale: SCNVector3(x: 0.0009, y: 0.0009, z: 0.0009),
-                                    minScale: SCNVector3(x: 0.0002, y: 0.0002, z: 0.0002), eulerAngles: SCNVector3.init())
+                                    minScale: SCNVector3(x: 0.0002, y: 0.0002, z: 0.0002), eulerAngles: SCNVector3.init())*/
         
-        arrPergolaModel.append(contentsOf: [modern, traditional])
-        selectedPergolaModel = modern
-    }
-    
-    /*private func fetchUSDZModelPathsFromBundle() {
-        guard let bundlePath = Bundle.main.resourcePath else {
-            print("Can't find resourcePath")
-            return
-        }
+        //arrPergolaModel.append(contentsOf: [modern, traditional])
+        //selectedPergolaModel = modern
 
-        let bundleURL = URL(fileURLWithPath: bundlePath)
         
-        do {
-            let contents = try FileManager.default.contentsOfDirectory(at: bundleURL, includingPropertiesForKeys: nil)
-            
-            // Filter for URLs with the .usdz extension
-            let usdzURLs = contents.filter { $0.pathExtension == "usdz" }
-            arrModelURLs = usdzURLs
-            selectedModelURL = arrModelURLs.first
-        } catch {
-            print("Error fetching files from bundle: \(error)")
-        }
-    }*/
+        let pivot6 = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+                               description: "6\" steel beams, louvered sunscreen",
+                               scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
+                               minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
+                                  eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0), image: .pivot6)
+        
+        let pivot6XL = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+                               description: "6\" steel beams, louvered sunscreen",
+                               scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
+                               minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
+                                  eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0), image: .pivot6XL)
+        
+        let pivot6XLSlide = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+                               description: "6\" steel beams, louvered sunscreen",
+                               scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
+                               minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
+                                  eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0), image: .pivot6XLSlide)
+        
+        let pan6 = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+                               description: "6\" steel beams, louvered sunscreen",
+                               scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
+                               minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
+                                  eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0), image: .pan6)
+        
+        arrPergolaModel.append(contentsOf: [pivot6, pivot6XL, pivot6XLSlide, pan6])
+    }
 }
  
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -90,6 +97,14 @@ extension Select3DObjectVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ModelSelectionCell", for: indexPath) as! ModelSelectionCell
         let model = arrPergolaModel[indexPath.row]
+        cell.imgLogo.image = model.image
+        cell.viewContainer.layer.borderColor = UIColor.systemGray4.cgColor
+        cell.viewContainer.layer.borderWidth = 1
+        
+        
+        return cell
+        
+        /*
         let isSelected = model.url == selectedPergolaModel?.url
         
         cell.lblName.text = model.url.deletingPathExtension().lastPathComponent
@@ -97,15 +112,24 @@ extension Select3DObjectVC: UITableViewDelegate, UITableViewDataSource {
         cell.lblDescription.isHidden = !isSelected //? UIColor.gray : UIColor.systemGray2
         cell.viewContainer.layer.borderColor = isSelected ? UIColor.gray.cgColor : UIColor.clear.cgColor
         cell.viewContainer.layer.borderWidth = isSelected ? 1 : 0
-        return cell
+        */
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPergolaModel = arrPergolaModel[indexPath.row]
-        tableView.reloadData()
+        //selectedPergolaModel = arrPergolaModel[indexPath.row]
+        //tableView.reloadData()
+        
+        let arPlaceModelVC = storyboard?.instantiateViewController(withIdentifier: "ARPlaceModelVC") as! ARPlaceModelVC
+        arPlaceModelVC.pergolaModel = arrPergolaModel[indexPath.row]
+        navigationController?.pushViewController(arPlaceModelVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        if UIDevice.current.userInterfaceIdiom == .phone {
+             return 80
+        } else {
+            let isPortrait = UIDevice.current.orientation.isPortrait
+            return isPortrait ? 80 : 160
+        }
     }
 }

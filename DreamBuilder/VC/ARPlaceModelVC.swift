@@ -15,7 +15,14 @@ class ARPlaceModelVC: UIViewController {
     @IBOutlet weak var viewMessage: UIView!
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var lblScale: UILabel!
-
+    
+    @IBOutlet weak var stackOptions: UIStackView!
+    @IBOutlet weak var stackAnimationSlider: UIStackView!
+    @IBOutlet weak var viewAnimationSlider: UIView!
+    @IBOutlet weak var sliderAnimation: UISlider!
+    @IBOutlet weak var btnShowSliderAnimation: UIButton!
+    @IBOutlet weak var btnShowLight: UIButton!
+    
     // MARK: - Variables
     private var arrPlanes: [SCNNode] = []
 
@@ -52,12 +59,38 @@ class ARPlaceModelVC: UIViewController {
         }
     }
 
+    // MARK: - Actions
+    @IBAction func btnShowSliderAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let self = self else { return }
+            if self.modelNode != nil {
+                self.viewAnimationSlider.isHidden = !sender.isSelected
+            } else {
+                self.viewAnimationSlider.isHidden = true
+                sender.isSelected = false
+            }
+        }
+    }
+    
+    @IBAction func sliderAnimationDidChanged(_ sender: UISlider) {
+        guard let modelNode = self.modelNode else { return }
+        updateAnimation(of: modelNode)
+    }
+    
     // MARK: - Functions
     private func setupSceneView() {
         viewMessage.layer.cornerRadius = 5
+        stackAnimationSlider.layer.cornerRadius = 5
+        viewAnimationSlider.layer.cornerRadius = 5
+        btnShowSliderAnimation.layer.cornerRadius = 5
+        btnShowLight.layer.cornerRadius = 5
+        
+        stackOptions.isHidden = true
         
         sceneView.delegate = self
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
         sceneView.allowsCameraControl = false
@@ -112,7 +145,6 @@ class ARPlaceModelVC: UIViewController {
             guard let self = self else { return }
             self.isShowPlanes.toggle()
             self.updatePlanesVisibility()
-            self.navRightBarButton.menu = getOptionMenu()
         })]
         
         let menu =  UIMenu(title: "Menu", image: nil, identifier: nil, options: [], children: menuItems)
@@ -197,9 +229,64 @@ class ARPlaceModelVC: UIViewController {
     }
     
     private func updatePlanesVisibility() {
+        navRightBarButton.menu = getOptionMenu()
+        
         arrPlanes.forEach { node in
             node.opacity = isShowPlanes ? 1 : 0
         }
+    }
+    
+    private func isNodeVisible(node: SCNNode) -> Bool {
+        if let pointOfView = sceneView.pointOfView {
+            let isMaybeVisible = sceneView.isNode(node, insideFrustumOf: pointOfView)
+            return isMaybeVisible
+        } else {
+            return false
+        }
+    }
+    
+    private func updateLblScaleValue() {
+        self.lblScale.isHidden = false
+        
+        guard let modelNode = modelNode else {
+            self.lblScale.text = "Width: -"
+            return
+        }
+
+        // Local bounding box (model space)
+        let (minVec, maxVec) = modelNode.boundingBox
+
+        // Model's world transform
+        let worldTransform = modelNode.simdWorldTransform // Use world transform for proper positioning in the world
+
+        // Corners of the bounding box in model space
+        let corners = [
+            simd_float4(minVec.x, minVec.y, minVec.z, 1.0),
+            simd_float4(maxVec.x, minVec.y, minVec.z, 1.0),
+            simd_float4(minVec.x, maxVec.y, minVec.z, 1.0),
+            simd_float4(maxVec.x, maxVec.y, minVec.z, 1.0)
+        ]
+        
+        // Transform corners to world space
+        let worldCorners = corners.map { worldTransform * $0 }
+        
+        // Calculate world width and height based on transformed corners (in meters)
+        let worldWidthInMeters = simd_distance(worldCorners[0], worldCorners[1])
+        let worldHeightInMeters = simd_distance(worldCorners[0], worldCorners[2])
+
+        // Convert from meters to feet
+        let conversionFactor: Float = 3.28084
+        let worldWidthInFeet = worldWidthInMeters * conversionFactor
+        let worldHeightInFeet = worldHeightInMeters * conversionFactor
+        
+        // Round to 3 decimal places
+        let formattedWidth = String(format: "%.2f", worldWidthInFeet)
+        let formattedHeight = String(format: "%.2f", worldHeightInFeet)
+        
+        print("World Width in Feet: \(formattedWidth) ft")
+        print("World Height in Feet: \(formattedHeight) ft\n")
+        
+        self.lblScale.text = "Width: \(formattedWidth) ft"
     }
     
     private func placeModel(result: ARRaycastResult) {
@@ -217,11 +304,7 @@ class ARPlaceModelVC: UIViewController {
         modelNode.position = SCNVector3(x: columns.3.x, y: columns.3.y, z: columns.3.z) 
         modelNode.eulerAngles = pergolaModel.eulerAngles
         modelNode.scale = pergolaModel.scale //SCNVector3(x: 0.0009, y: 0.0009, z: 0.0009)
-        
-        DispatchQueue.main.async {
-            self.lblScale.isHidden = false
-            self.lblScale.text = "Scale: \(modelNode.scale.x)"
-        }
+        stopAnimation(of: modelNode)
 
         // Directional light for realistic lighting and shadows
         /*let light = SCNLight()
@@ -258,8 +341,61 @@ class ARPlaceModelVC: UIViewController {
         modelNode.addChildNode(directionalLightNode!)
         modelNode.addChildNode(ambientLightNode)*/
         
+        self.sceneView.scene.rootNode.addChildNode(modelNode)
         self.modelNode = modelNode
-        sceneView.scene.rootNode.addChildNode(modelNode)
+        
+        // hide plains after placing model
+        self.isShowPlanes = false
+        self.updatePlanesVisibility()
+
+        DispatchQueue.main.async { [weak self] in
+            self?.stackOptions.isHidden = false
+            self?.updateLblScaleValue()
+        }
+    }
+    
+    private func stopAnimation(of modelNode: SCNNode) {
+        let animationKeys = modelNode.animationKeys
+        
+        animationKeys.forEach { key in
+            if let animationPlayer = modelNode.animationPlayer(forKey: key) {
+                //animationPlayer.speed = 0.0
+                animationPlayer.play()
+                animationPlayer.speed = 0.0
+            }
+        }
+        
+        // Recursively stop down animations for all child nodes
+        modelNode.childNodes.forEach { childNode in
+            stopAnimation(of: childNode)
+        }
+    }
+    
+    private func updateAnimation(of modelNode: SCNNode) {
+        let animationKeys = modelNode.animationKeys
+        
+        animationKeys.forEach { key in
+            if let animationPlayer = modelNode.animationPlayer(forKey: key) {
+                let normalizedTime = CGFloat(self.sliderAnimation.value / 100.0)
+                let timeInteval = TimeInterval(normalizedTime) * animationPlayer.animation.duration
+                
+                print("time interval: \(timeInteval)")
+                print("duration: \(animationPlayer.animation.duration)\n")
+                
+                animationPlayer.animation.timeOffset = timeInteval
+            }
+        }
+        
+        // Recursively update animations for all child nodes
+        modelNode.childNodes.forEach { childNode in
+            updateAnimation(of: childNode)
+        }
+    }
+    
+    private func searchForNode(in modelNode: SCNNode) {
+        modelNode.childNodes.forEach { node in
+            searchForNode(in: node)
+        }
     }
 }
 
@@ -286,15 +422,6 @@ extension ARPlaceModelVC: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         node.enumerateChildNodes { childNode, _ in
             childNode.removeFromParentNode()
-        }
-    }
-    
-    private func isNodeVisible(node: SCNNode) -> Bool {
-        if let pointOfView = sceneView.pointOfView {
-            let isMaybeVisible = sceneView.isNode(node, insideFrustumOf: pointOfView)
-            return isMaybeVisible
-        } else {
-            return false
         }
     }
 }
@@ -371,7 +498,7 @@ extension ARPlaceModelVC: UIGestureRecognizerDelegate {
     @objc private func handlePinchGesture(_ gesture: UIPinchGestureRecognizer) {
         guard gesture.view is ARSCNView else { return }
 
-        if let node = modelNode, isNodeVisible(node: node)  {
+        if let node = modelNode, isNodeVisible(node: node) {
             let pinchScaleX = Float(gesture.scale) * node.scale.x
             let pinchScaleY = Float(gesture.scale) * node.scale.y
             let pinchScaleZ = Float(gesture.scale) * node.scale.z
@@ -379,10 +506,8 @@ extension ARPlaceModelVC: UIGestureRecognizerDelegate {
             guard pinchScaleX > pergolaModel.minScale.x else { return }
             node.scale = SCNVector3(pinchScaleX, pinchScaleY, pinchScaleZ)
 
-            DispatchQueue.main.async {
-                let scale = node.scale.x
-                self.lblScale.text = "Scale: \(scale)"
-                self.lblScale.isHidden = false
+            DispatchQueue.main.async { [weak self] in
+                self?.updateLblScaleValue()
             }
 
             gesture.scale = 1.0

@@ -17,4 +17,5 @@ struct PergolaModel {
     let scale: SCNVector3
     let minScale: SCNVector3
     let eulerAngles: SCNVector3
+    let image: UIImage
 }
