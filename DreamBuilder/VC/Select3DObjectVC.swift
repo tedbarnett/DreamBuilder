@@ -60,7 +60,7 @@ class Select3DObjectVC: UIViewController {
         //selectedPergolaModel = modern
 
         
-        let pivot6 = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+        /*let pivot6 = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
                                description: "6\" steel beams, louvered sunscreen",
                                scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
                                minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
@@ -84,7 +84,7 @@ class Select3DObjectVC: UIViewController {
                                minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
                                   eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0), image: .pan6)
         
-        arrPergolaModel.append(contentsOf: [pivot6, pivot6XL, pivot6XLSlide, pan6])
+        arrPergolaModel.append(contentsOf: [pivot6, pivot6XL, pivot6XLSlide, pan6])*/
     }
 }
  

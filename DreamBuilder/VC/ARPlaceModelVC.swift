@@ -32,12 +32,16 @@ class ARPlaceModelVC: UIViewController {
     private var modelNode: SCNNode?
     private var directionalLightNode: SCNNode?
     
+    private var focusSquare = FocusSquare()
+    private var screenCenter: CGPoint?
+    
+    internal var dragOnInfinitePlanesEnabled = false
     var pergolaModel: PergolaModel!
 
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSceneView()
+        setupUI()
         setupGestures()
     }
 
@@ -80,7 +84,7 @@ class ARPlaceModelVC: UIViewController {
     }
     
     // MARK: - Functions
-    private func setupSceneView() {
+    private func setupUI() {
         viewMessage.layer.cornerRadius = 5
         stackAnimationSlider.layer.cornerRadius = 5
         viewAnimationSlider.layer.cornerRadius = 5
@@ -95,6 +99,21 @@ class ARPlaceModelVC: UIViewController {
         sceneView.automaticallyUpdatesLighting = true
         sceneView.allowsCameraControl = false
         sceneView.scene = SCNScene()
+    }
+    
+    func setupFocusSquare() {
+        focusSquare.unhide()
+        focusSquare.removeFromParentNode()
+        sceneView.scene.rootNode.addChildNode(focusSquare)
+    }
+    
+    func updateFocusSquare() {
+        DispatchQueue.main.async {
+            let (worldPosition, planeAnchor, _) = self.worldPositionFromScreenPosition(self.view.center, objectPos: self.focusSquare.position)
+            if let worldPosition = worldPosition {
+                self.focusSquare.update(for: worldPosition, planeAnchor: planeAnchor, camera: self.sceneView.session.currentFrame?.camera)
+            }
+        }
     }
 
     private func setupGestures() {
@@ -188,36 +207,38 @@ class ARPlaceModelVC: UIViewController {
 
         DispatchQueue.main.async {
             UIApplication.shared.isIdleTimerDisabled = true
+            self.screenCenter = self.sceneView.bounds.mid
             self.sceneView.addCoaching()
+            self.setupFocusSquare()
             self.showMessage(Message.findASurfaceToPlaneAnObject)
         }
     }
 
     private func createPlane(planeAnchor: ARPlaneAnchor, node: SCNNode){
-        let planeGeomentry = SCNPlane(width: CGFloat(planeAnchor.planeExtent.width), height: CGFloat(planeAnchor.planeExtent.height))
+        /*let planeGeomentry = SCNPlane(width: CGFloat(planeAnchor.planeExtent.width), height: CGFloat(planeAnchor.planeExtent.height))
         planeGeomentry.materials.first?.diffuse.contents = UIColor.green.withAlphaComponent(0.6) //UIColor.blue.withAlphaComponent(0.5)
         planeGeomentry.materials.first?.isDoubleSided = true
 
         
         let planeNode = SCNNode(geometry: planeGeomentry)
         planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0.0, z: planeAnchor.center.z)
-        planeNode.eulerAngles = SCNVector3(x: Float(Double.pi) / 2, y: 0, z: 0)
+        planeNode.eulerAngles = SCNVector3(x: -.pi / 2, y: 0, z: 0)
         planeNode.name = "Plane Preview"
         planeNode.opacity = isShowPlanes ? 1 : 0
         
         node.addChildNode(planeNode)
-        arrPlanes.append(planeNode)
+        arrPlanes.append(planeNode) */
     }
     
     private func updatePlane(planeAnchor: ARPlaneAnchor, node: SCNNode){
-        if let planeNode = node.childNodes.first  {
+        /*if let planeNode = node.childNodes.first  {
             if let planeGeomentry = node.childNodes.first?.geometry as? SCNPlane{
                 planeGeomentry.width = CGFloat(planeAnchor.planeExtent.width)
                 planeGeomentry.height = CGFloat(planeAnchor.planeExtent.height)
                 planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0.0, z: planeAnchor.center.z)
                 planeNode.opacity = isShowPlanes ? 1 : 0
             }
-        }
+        }*/
     }
 
     private func removePlane() {
@@ -230,7 +251,6 @@ class ARPlaceModelVC: UIViewController {
     
     private func updatePlanesVisibility() {
         navRightBarButton.menu = getOptionMenu()
-        
         arrPlanes.forEach { node in
             node.opacity = isShowPlanes ? 1 : 0
         }
@@ -291,10 +311,12 @@ class ARPlaceModelVC: UIViewController {
     
     private func placeModel(result: ARRaycastResult) {
         let name = pergolaModel.url.lastPathComponent
-        guard let modelScene = try? SCNScene(url: pergolaModel.url, options: nil) else {
+        guard let modelScene = try? SCNScene(url: Bundle.main.url(forResource: "Modern1", withExtension: "scn")!, options: nil) else {
             showMessage(Message.faileToLoadObject)
             return
         }
+        
+        //Bundle.main.url(forResource: "Modern1", withExtension: "scn")!
         
         let modelNode = modelScene.rootNode.clone()
         let columns = result.worldTransform.columns
@@ -391,12 +413,6 @@ class ARPlaceModelVC: UIViewController {
             updateAnimation(of: childNode)
         }
     }
-    
-    private func searchForNode(in modelNode: SCNNode) {
-        modelNode.childNodes.forEach { node in
-            searchForNode(in: node)
-        }
-    }
 }
 
 // MARK: - ARSCNViewDelegate
@@ -422,6 +438,16 @@ extension ARPlaceModelVC: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         node.enumerateChildNodes { childNode, _ in
             childNode.removeFromParentNode()
+        }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        if modelNode == nil {
+            //DispatchQueue.main.async {
+                self.updateFocusSquare()
+            //}
+        } else {
+            self.focusSquare.removeFromParentNode()
         }
     }
 }

@@ -7,29 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		882165BC2CC65AF2003A65E8 /* Modern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 882165BB2CC65AF2003A65E8 /* Modern.usdz */; };
 		882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */; };
-		883CB5302CBE3A530067B74A /* Traditional.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 883CB52D2CBE3A530067B74A /* Traditional.usdz */; };
 		88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406AFF2CAE5FED0058E99A /* AppDelegate.swift */; };
 		88406B022CAE5FED0058E99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B012CAE5FED0058E99A /* SceneDelegate.swift */; };
 		88406B072CAE5FED0058E99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88406B052CAE5FED0058E99A /* Main.storyboard */; };
 		88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88406B082CAE5FEF0058E99A /* Assets.xcassets */; };
 		88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88406B0A2CAE5FEF0058E99A /* LaunchScreen.storyboard */; };
 		88406B262CAE61C80058E99A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B252CAE61C80058E99A /* Extensions.swift */; };
+		885593962CC7B45900CFD9D8 /* PergolaModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885593942CC7B45900CFD9D8 /* PergolaModelCell.swift */; };
+		885593972CC7B45900CFD9D8 /* PergolaModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885593952CC7B45900CFD9D8 /* PergolaModelCell.xib */; };
+		8855939A2CC7BBA400CFD9D8 /* ColorPickPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885593992CC7BBA400CFD9D8 /* ColorPickPopupVC.swift */; };
 		88588FEE2CC0E40500EEBABC /* PergolaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88588FED2CC0E40500EEBABC /* PergolaModel.swift */; };
+		885EA8B82CC773E40007324C /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885EA8B72CC773E40007324C /* FocusSquare.swift */; };
+		885EA8BC2CC77ACB0007324C /* ARPlaceModelVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885EA8BB2CC77ACB0007324C /* ARPlaceModelVC+Extension.swift */; };
+		885EA8C12CC79E1A0007324C /* ARCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885EA8C02CC79E1A0007324C /* ARCameraVC.swift */; };
+		885EA8C62CC7B3200007324C /* ChangeModelPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885EA8C52CC7B3200007324C /* ChangeModelPopupVC.swift */; };
 		8863DE492CBCE10F0097222D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE482CBCE10F0097222D /* Constants.swift */; };
 		8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */; };
+		886AA9112CCCB126004393B3 /* Modern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 886AA9102CCCB126004393B3 /* Modern.usdz */; };
+		886AA9152CCCBBA4004393B3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 886AA9142CCCBBA4004393B3 /* Models.scnassets */; };
+		888FF22D2CC8B01200FCF8DA /* AdjustLightPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888FF22C2CC8B01100FCF8DA /* AdjustLightPopupVC.swift */; };
 		8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */; };
 		8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */; };
 		8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */; };
-		8890E8E82CB3C5B400909554 /* AdjustLightPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */; };
+		8890E8E82CB3C5B400909554 /* AdjustAnimationPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E72CB3C5B400909554 /* AdjustAnimationPopupVC.swift */; };
 		8890E8EA2CB3C96500909554 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8E92CB3C96500909554 /* CustomSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		882165BB2CC65AF2003A65E8 /* Modern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Modern.usdz; sourceTree = "<group>"; };
 		882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaceModelVC.swift; sourceTree = "<group>"; };
-		883CB52D2CBE3A530067B74A /* Traditional.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Traditional.usdz; sourceTree = "<group>"; };
 		88406AFC2CAE5FED0058E99A /* DreamBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88406AFF2CAE5FED0058E99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88406B012CAE5FED0058E99A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,13 +44,23 @@
 		88406B0B2CAE5FEF0058E99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88406B0D2CAE5FEF0058E99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88406B252CAE61C80058E99A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		885593942CC7B45900CFD9D8 /* PergolaModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergolaModelCell.swift; sourceTree = "<group>"; };
+		885593952CC7B45900CFD9D8 /* PergolaModelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PergolaModelCell.xib; sourceTree = "<group>"; };
+		885593992CC7BBA400CFD9D8 /* ColorPickPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickPopupVC.swift; sourceTree = "<group>"; };
 		88588FED2CC0E40500EEBABC /* PergolaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PergolaModel.swift; sourceTree = "<group>"; };
+		885EA8B72CC773E40007324C /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		885EA8BB2CC77ACB0007324C /* ARPlaceModelVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARPlaceModelVC+Extension.swift"; sourceTree = "<group>"; };
+		885EA8C02CC79E1A0007324C /* ARCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraVC.swift; sourceTree = "<group>"; };
+		885EA8C52CC7B3200007324C /* ChangeModelPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeModelPopupVC.swift; sourceTree = "<group>"; };
 		8863DE482CBCE10F0097222D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		886AA9102CCCB126004393B3 /* Modern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Modern.usdz; sourceTree = "<group>"; };
+		886AA9142CCCBBA4004393B3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
+		888FF22C2CC8B01100FCF8DA /* AdjustLightPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustLightPopupVC.swift; sourceTree = "<group>"; };
 		8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select3DObjectVC.swift; sourceTree = "<group>"; };
 		8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectionCell.swift; sourceTree = "<group>"; };
 		8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelSelectionCell.xib; sourceTree = "<group>"; };
-		8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustLightPopupVC.swift; sourceTree = "<group>"; };
+		8890E8E72CB3C5B400909554 /* AdjustAnimationPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustAnimationPopupVC.swift; sourceTree = "<group>"; };
 		8890E8E92CB3C96500909554 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,9 +135,11 @@
 		88406B162CAE60990058E99A /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				885EA8C42CC7B2660007324C /* Popup */,
 				8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */,
+				885EA8C02CC79E1A0007324C /* ARCameraVC.swift */,
 				882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */,
-				8890E8E72CB3C5B400909554 /* AdjustLightPopupVC.swift */,
+				885EA8BB2CC77ACB0007324C /* ARPlaceModelVC+Extension.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -138,8 +156,9 @@
 		88406B242CAE61C80058E99A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */,
 				88406B252CAE61C80058E99A /* Extensions.swift */,
+				885EA8B72CC773E40007324C /* FocusSquare.swift */,
+				8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */,
 				8890E8E92CB3C96500909554 /* CustomSlider.swift */,
 				8863DE482CBCE10F0097222D /* Constants.swift */,
 			);
@@ -149,10 +168,19 @@
 		88406B272CAE66FF0058E99A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				882165BB2CC65AF2003A65E8 /* Modern.usdz */,
-				883CB52D2CBE3A530067B74A /* Traditional.usdz */,
+				886AA9142CCCBBA4004393B3 /* Models.scnassets */,
+				886AA9102CCCB126004393B3 /* Modern.usdz */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		885593982CC7B45D00CFD9D8 /* PergolaModelCell */ = {
+			isa = PBXGroup;
+			children = (
+				885593942CC7B45900CFD9D8 /* PergolaModelCell.swift */,
+				885593952CC7B45900CFD9D8 /* PergolaModelCell.xib */,
+			);
+			path = PergolaModelCell;
 			sourceTree = "<group>";
 		};
 		88588FEC2CC0E3F200EEBABC /* Model */ = {
@@ -163,11 +191,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		885EA8C42CC7B2660007324C /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				8890E8E72CB3C5B400909554 /* AdjustAnimationPopupVC.swift */,
+				885EA8C52CC7B3200007324C /* ChangeModelPopupVC.swift */,
+				885593992CC7BBA400CFD9D8 /* ColorPickPopupVC.swift */,
+				888FF22C2CC8B01100FCF8DA /* AdjustLightPopupVC.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		8890E8D72CB3A2D400909554 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */,
 				8890E8D92CB3A2F800909554 /* ModelSelectionCell.xib */,
+				885593982CC7B45D00CFD9D8 /* PergolaModelCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -235,12 +275,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883CB5302CBE3A530067B74A /* Traditional.usdz in Resources */,
+				886AA9152CCCBBA4004393B3 /* Models.scnassets in Resources */,
 				88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */,
 				88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */,
 				88406B072CAE5FED0058E99A /* Main.storyboard in Resources */,
+				885593972CC7B45900CFD9D8 /* PergolaModelCell.xib in Resources */,
+				886AA9112CCCB126004393B3 /* Modern.usdz in Resources */,
 				8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */,
-				882165BC2CC65AF2003A65E8 /* Modern.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,16 +316,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */,
+				885EA8B82CC773E40007324C /* FocusSquare.swift in Sources */,
 				882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */,
+				885EA8BC2CC77ACB0007324C /* ARPlaceModelVC+Extension.swift in Sources */,
 				88588FEE2CC0E40500EEBABC /* PergolaModel.swift in Sources */,
-				8890E8E82CB3C5B400909554 /* AdjustLightPopupVC.swift in Sources */,
+				888FF22D2CC8B01200FCF8DA /* AdjustLightPopupVC.swift in Sources */,
+				8890E8E82CB3C5B400909554 /* AdjustAnimationPopupVC.swift in Sources */,
+				885EA8C12CC79E1A0007324C /* ARCameraVC.swift in Sources */,
 				8890E8EA2CB3C96500909554 /* CustomSlider.swift in Sources */,
 				8863DE492CBCE10F0097222D /* Constants.swift in Sources */,
 				88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */,
 				88406B022CAE5FED0058E99A /* SceneDelegate.swift in Sources */,
 				8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */,
+				885593962CC7B45900CFD9D8 /* PergolaModelCell.swift in Sources */,
 				88406B262CAE61C80058E99A /* Extensions.swift in Sources */,
+				885EA8C62CC7B3200007324C /* ChangeModelPopupVC.swift in Sources */,
 				8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */,
+				8855939A2CC7BBA400CFD9D8 /* ColorPickPopupVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,9 +483,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 63K8J7P389;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KQ3X2L5SCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamBuilder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App need access to the camera to show 3D models.";
@@ -452,9 +502,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pergola.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.realtest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -470,9 +521,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 63K8J7P389;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KQ3X2L5SCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamBuilder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App need access to the camera to show 3D models.";
@@ -487,9 +540,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pergola.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.realtest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = realtest_dev_17_April_2024;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
