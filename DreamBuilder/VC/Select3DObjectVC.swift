@@ -20,6 +20,7 @@ class Select3DObjectVC: UIViewController {
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadModels()
         setupUI()
     }
@@ -45,19 +46,24 @@ class Select3DObjectVC: UIViewController {
     }
     
     private func loadModels() {
-        /*let modern = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
-                               description: "6\" steel beams, louvered sunscreen",
-                               scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
-                               minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
-                               eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0))
+        let modern1 = PergolaModel(url: Bundle.main.url(forResource: "PERGOLA_12x20x9_Y-UP", withExtension: "usdz")!,
+                                  name: "2 post",
+                                  description: "6\" steel beams, louvered sunscreen",
+                                  scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
+                                  minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
+                                  eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0),
+                                  image: .pivot6, baseColor: .black, louverColor: .gray)
         
-        let traditional = PergolaModel(url: Bundle.main.url(forResource: "Traditional", withExtension: "usdz")!,
-                                    description: "Oak 6\" beams",
-                                    scale: SCNVector3(x: 0.0009, y: 0.0009, z: 0.0009),
-                                    minScale: SCNVector3(x: 0.0002, y: 0.0002, z: 0.0002), eulerAngles: SCNVector3.init())*/
+        let modern2 = PergolaModel(url: Bundle.main.url(forResource: "PERGOLA_12x20x9_Y-UP", withExtension: "usdz")!,
+                                  name: "4 post",
+                                  description: "6\" steel beams, louvered sunscreen",
+                                  scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
+                                  minScale: SCNVector3(x: 0.008, y: 0.008, z: 0.008),
+                                  eulerAngles: SCNVector3(x: -1.6, y: 0, z: 0),
+                                  image: .pivot6, baseColor: .black, louverColor: .gray)
         
-        //arrPergolaModel.append(contentsOf: [modern, traditional])
-        //selectedPergolaModel = modern
+        arrPergolaModel.append(contentsOf: [modern1, modern2])
+        selectedPergolaModel = modern1
 
         
         /*let pivot6 = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
@@ -97,7 +103,7 @@ extension Select3DObjectVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ModelSelectionCell", for: indexPath) as! ModelSelectionCell
         let model = arrPergolaModel[indexPath.row]
-        cell.imgLogo.image = model.image
+        //cell.imgLogo.image = model.image
         cell.viewContainer.layer.borderColor = UIColor.systemGray4.cgColor
         cell.viewContainer.layer.borderWidth = 1
         

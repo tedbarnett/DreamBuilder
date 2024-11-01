@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MfV-Rk-cbE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MfV-Rk-cbE">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqv-zZ-CY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="-27"/>
+            <point key="canvasLocation" x="-622" y="368"/>
         </scene>
         <!--Adjust Animation PopupVC-->
         <scene sceneID="Bzs-sF-LRk">
@@ -186,7 +186,9 @@
                                     <constraint firstAttribute="height" constant="56" id="jdi-x6-Ufp"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="btn_set_ground"/>
+                                <state key="normal" title="Tap ground to start">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
                                 <connections>
                                     <action selector="btnSetGroundAction:" destination="vAK-oc-Nld" eventType="touchUpInside" id="Yly-Za-7pK"/>
                                 </connections>
@@ -819,10 +821,10 @@ width</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorColllectionCell" id="2MC-jq-rCY" customClass="ColorColllectionCell" customModule="DreamBuilder" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="7.666666666666667" width="60" height="59.999999999999993"/>
+                                        <rect key="frame" x="25" y="7.666666666666667" width="60" height="59.999999999999986"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v9Z-Mv-crL">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="59.999999999999993"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="59.999999999999986"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16x-xo-Go0">
@@ -976,13 +978,15 @@ width</string>
     </designables>
     <resources>
         <image name="btn_bg_black" width="69" height="53"/>
-        <image name="btn_set_ground" width="168" height="56"/>
         <image name="logo" width="936" height="159"/>
         <image name="slider.horizontal.below.rectangle" catalog="system" width="128" height="113"/>
         <image name="sun.max" catalog="system" width="128" height="125"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

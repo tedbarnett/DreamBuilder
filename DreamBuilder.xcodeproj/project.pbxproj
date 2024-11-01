@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F5B871C2CCF783400B7897A /* PERGOLA_12x20x9_Y-UP.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B871B2CCF783400B7897A /* PERGOLA_12x20x9_Y-UP.usdz */; };
 		882A83DC2CB8E1460095BA6C /* ARPlaceModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */; };
 		88406B002CAE5FED0058E99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406AFF2CAE5FED0058E99A /* AppDelegate.swift */; };
 		88406B022CAE5FED0058E99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88406B012CAE5FED0058E99A /* SceneDelegate.swift */; };
@@ -24,8 +25,6 @@
 		885EA8C62CC7B3200007324C /* ChangeModelPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885EA8C52CC7B3200007324C /* ChangeModelPopupVC.swift */; };
 		8863DE492CBCE10F0097222D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE482CBCE10F0097222D /* Constants.swift */; };
 		8863DE4B2CBCE3250097222D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */; };
-		886AA9112CCCB126004393B3 /* Modern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 886AA9102CCCB126004393B3 /* Modern.usdz */; };
-		886AA9152CCCBBA4004393B3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 886AA9142CCCBBA4004393B3 /* Models.scnassets */; };
 		888FF22D2CC8B01200FCF8DA /* AdjustLightPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888FF22C2CC8B01100FCF8DA /* AdjustLightPopupVC.swift */; };
 		8890E8D62CB39E8A00909554 /* Select3DObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */; };
 		8890E8DA2CB3A2F800909554 /* ModelSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */; };
@@ -35,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F5B871B2CCF783400B7897A /* PERGOLA_12x20x9_Y-UP.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "PERGOLA_12x20x9_Y-UP.usdz"; sourceTree = "<group>"; };
 		882A83DB2CB8E1460095BA6C /* ARPlaceModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaceModelVC.swift; sourceTree = "<group>"; };
 		88406AFC2CAE5FED0058E99A /* DreamBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88406AFF2CAE5FED0058E99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +54,6 @@
 		885EA8C52CC7B3200007324C /* ChangeModelPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeModelPopupVC.swift; sourceTree = "<group>"; };
 		8863DE482CBCE10F0097222D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8863DE4A2CBCE3250097222D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
-		886AA9102CCCB126004393B3 /* Modern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Modern.usdz; sourceTree = "<group>"; };
-		886AA9142CCCBBA4004393B3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		888FF22C2CC8B01100FCF8DA /* AdjustLightPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustLightPopupVC.swift; sourceTree = "<group>"; };
 		8890E8D52CB39E8A00909554 /* Select3DObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select3DObjectVC.swift; sourceTree = "<group>"; };
 		8890E8D82CB3A2F800909554 /* ModelSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectionCell.swift; sourceTree = "<group>"; };
@@ -168,8 +166,7 @@
 		88406B272CAE66FF0058E99A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				886AA9142CCCBBA4004393B3 /* Models.scnassets */,
-				886AA9102CCCB126004393B3 /* Modern.usdz */,
+				5F5B871B2CCF783400B7897A /* PERGOLA_12x20x9_Y-UP.usdz */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,12 +272,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				886AA9152CCCBBA4004393B3 /* Models.scnassets in Resources */,
 				88406B0C2CAE5FEF0058E99A /* LaunchScreen.storyboard in Resources */,
 				88406B092CAE5FEF0058E99A /* Assets.xcassets in Resources */,
 				88406B072CAE5FED0058E99A /* Main.storyboard in Resources */,
 				885593972CC7B45900CFD9D8 /* PergolaModelCell.xib in Resources */,
-				886AA9112CCCB126004393B3 /* Modern.usdz in Resources */,
+				5F5B871C2CCF783400B7897A /* PERGOLA_12x20x9_Y-UP.usdz in Resources */,
 				8890E8DB2CB3A2F800909554 /* ModelSelectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

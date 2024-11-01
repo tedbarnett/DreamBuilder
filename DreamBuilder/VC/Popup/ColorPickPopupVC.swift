@@ -22,7 +22,16 @@ class ColorPickPopupVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Variables
-    var arrColors: [UIColor] = [.red, .green, .blue, .yellow, .orange, .purple, .brown, .black, .white, .gray, .cyan, .magenta, .darkGray, .lightGray]
+    
+    var arrColors: [UIColor] = [
+        UIColor(named: "P_Gray") ?? .black,
+        UIColor(named: "P_White") ?? .black,
+        UIColor(named: "P_Bronze") ?? .black,
+        UIColor(named: "P_Beige") ?? .black,
+        UIColor(named: "P_Adobe") ?? .black,
+        UIColor(named: "P_Black") ?? .black
+    ]
+    
     var colorDidSelected: ((UIColor)->())?
     var titleStr: String = ""
     

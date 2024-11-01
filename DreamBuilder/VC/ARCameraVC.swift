@@ -40,13 +40,24 @@ class ARCameraVC: UIViewController {
     // MARK: - Lifeycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .black
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        // Apply the appearance to the navigation bar
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        
         setupUI()
         setupGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = "Pergola X"
+        self.title = "Pergola X"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,7 +83,8 @@ class ARCameraVC: UIViewController {
         sceneView.scene = SCNScene()
         sceneView.session.pause()
         
-        let modern = PergolaModel(url: Bundle.main.url(forResource: "Modern", withExtension: "usdz")!,
+        let modelName = "PERGOLA_12x20x9_Y-UP"
+        let modern = PergolaModel(url: Bundle.main.url(forResource: modelName, withExtension: "usdz")!,
                                   name: "2 post",
                                   description: "6\" steel beams, louvered sunscreen",
                                   scale: SCNVector3(x: 0.09, y: 0.09, z: 0.09),
@@ -88,7 +100,7 @@ class ARCameraVC: UIViewController {
                                         eulerAngles: .init(),
                                         image: .pivot6, baseColor: .black, louverColor: .gray)*/
         
-        let availableObjects: [PergolaModel] = {
+        /*let availableObjects: [PergolaModel] = {
             let modelsURL = Bundle.main.url(forResource: "Models.scnassets", withExtension: nil)!
 
             let fileEnumerator = FileManager().enumerator(at: modelsURL, includingPropertiesForKeys: [])!
@@ -99,12 +111,12 @@ class ARCameraVC: UIViewController {
                 guard url.pathExtension == "scn" && !url.path.contains("lighting") else { return nil }
                 return PergolaModel(url: url, name: url.lastPathComponent.replacingOccurrences(of: ".scn", with: ""), description: "", scale: .init(), minScale: .init(), eulerAngles: .init(), image: .pivot6, baseColor: .black, louverColor: .clear)
             }
-        }()
+        }()*/
         
         self.pergolaModel = modern
         //self.pergolaModel = availableObjects.first(where: {$0.name == "lamp" })
-        self.arrPergoals = [modern]
-        self.arrPergoals.append(contentsOf: availableObjects)
+        //self.arrPergoals = [modern]
+        //self.arrPergoals.append(contentsOf: availableObjects)
     }
         
     private func setNavigationMenu() {
@@ -358,7 +370,7 @@ class ARCameraVC: UIViewController {
     
     @IBAction func btnChangeModelAction(_ sender: UIButton) {
         let changeModelPopupVC = storyboard?.instantiateViewController(withIdentifier: "ChangeModelPopupVC") as! ChangeModelPopupVC
-        changeModelPopupVC.arrPergoals = arrPergoals
+        changeModelPopupVC.arrPergola = arrPergoals
         changeModelPopupVC.pergolaModelDidSelected = { [weak self] pergolaModel in
             guard let self = self else { return }
             if let modelNode = self.modelNode {
